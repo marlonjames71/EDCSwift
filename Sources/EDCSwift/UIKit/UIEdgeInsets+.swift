@@ -37,6 +37,57 @@ extension UIEdgeInsets {
 	}
 }
 
+// MARK: - Instance Methods
+
+extension UIEdgeInsets {
+	public func top(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.top = value
+		return insets
+	}
+	
+	public func left(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.left = value
+		return insets
+	}
+	
+	public func bottom(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.bottom = value
+		return insets
+	}
+	
+	public func right(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.right = value
+		return insets
+	}
+	
+	public func all(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.top = value
+		insets.left = value
+		insets.bottom = value
+		insets.right = value
+		return insets
+	}
+	
+	public func vertical(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.top = value
+		insets.bottom = value
+		return insets
+	}
+	
+	public func horizontal(_ value: CGFloat) -> Self {
+		var insets = self
+		insets.left = value
+		insets.right = value
+		return insets
+	}
+}
+
 // MARK: - EDGE INSETS BUILDER
 
 extension UIEdgeInsets {

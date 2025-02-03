@@ -53,7 +53,11 @@ extension CAGradientLayer.GradientAxis {
 extension CAGradientLayer {
 	
 	/// Creates a gradient layer
-	public static func gradientLayer(axis: GradientAxis, in bounds: CGRect, colors: [UIColor]) -> Self {
+	public static func gradientLayer(
+		axis: GradientAxis,
+		in bounds: CGRect,
+		colors: [UIColor]
+	) -> Self {
 		let layer = Self()
 		layer.frame = bounds
 		layer.colors = colors.map(\.cgColor)
