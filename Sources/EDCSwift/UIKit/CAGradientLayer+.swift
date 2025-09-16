@@ -40,10 +40,13 @@ extension CAGradientLayer.GradientAxis {
 		switch self {
 		case .horizontal:
 			(CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5))
+		
 		case .vertical:
 			(CGPoint(x: 0.5, y: 0), CGPoint(x: 0.5, y: 1))
+		
 		case .leadingDiagonal:
 			(CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 1))
+		
 		case .trailingDiagonal:
 			(CGPoint(x: 1, y: 0), CGPoint(x: 0, y: 1))
 		}
