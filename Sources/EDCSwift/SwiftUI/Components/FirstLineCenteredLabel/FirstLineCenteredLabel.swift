@@ -177,7 +177,7 @@ public struct FirstLineCenteredLabel<Icon: View>: View {
 				}
 				.frame(
 					maxWidth: useIntrinsicWidth ? nil : .infinity,
-					alignment: useIntrinsicWidth ? .leading : .leading
+					alignment: useIntrinsicWidth ? .center : .leading
 				)
 		}
 	}
@@ -190,8 +190,7 @@ extension FirstLineCenteredLabel {
 	/// By default, the label stretches horizontally to `maxWidth: .infinity`
 	/// so it behaves naturally inside flexible layouts like lists and forms.
 	/// If you need the label to size itself only as wide as its content (for
-	/// example, when placed in a flow layout or alongside other intrinsic-sized
-	/// elements), call this modifier:
+	/// example, alongside other intrinsic-sized elements), call this modifier:
 	///
 	/// ```swift
 	/// FirstLineCenteredLabel("Short note", systemName: "info.circle")
@@ -200,9 +199,9 @@ extension FirstLineCenteredLabel {
 	///
 	/// - Returns: A copy of the label configured to use its intrinsic width.
 	///
-	public func usesIntrinsicWidth() -> Self {
+    public func usesIntrinsicWidth(_ usesIntrinsicWidth: Bool = true) -> Self {
 		var copy = self
-		copy._useIntrinsicWidth = .init(wrappedValue: true)
+		copy._useIntrinsicWidth = .init(wrappedValue: usesIntrinsicWidth)
 		return copy
 	}
 }
